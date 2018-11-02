@@ -6,6 +6,10 @@ class SecretDiary
 		@status
 	end
 
+	def unlocked
+		@status = false
+	end
+
 	def add_entry
 		fail 'Method block' if @status == true
 	end
