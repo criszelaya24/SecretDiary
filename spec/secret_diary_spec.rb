@@ -7,10 +7,12 @@ describe SecretDiary do
 		end
 	end
 
-	context 'Calling method while there are blocks' do
+	context 'Calling method entry while is block' do
 		it 'error' do
 			error = SecretDiary.new
-			expect(secret.add_entry).to raise_error 'Method block'
+			expect{error.add_entry}.to raise_error('Method block')
 		end
 	end
+
+	
 end
