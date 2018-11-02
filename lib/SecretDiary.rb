@@ -9,6 +9,10 @@ class SecretDiary
 	def add_entry
 		fail 'Method block' if @status == true
 	end
+
+	def get_entries
+		fail 'Method block' if @status == true
+	end
 end
 
 # test = SecretDiary.new
