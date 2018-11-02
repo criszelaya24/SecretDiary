@@ -1,4 +1,4 @@
-class  Pass
+class  Security
 	def initialize
 		@@status = true
 	end
@@ -12,9 +12,11 @@ class  Pass
 
 end
 
-class Methods < Pass
-	def add_entry
+class Diary < Security
+	def add_entry(add)
 		fail 'Method block' if @@status == true
+		@add = add
+		@add
 	end
 
 	def get_entries
