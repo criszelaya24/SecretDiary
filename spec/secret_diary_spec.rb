@@ -2,14 +2,14 @@ require 'SecretDiary'
 # THE PASS CLASS
 describe Security do
 	context 'Key for the dairy is locked' do
-		it 'locked' do
+		it 'locked dairy' do
 			secret = Security.new
 			expect(secret.locked).to eq true
 		end
 	end
 
 	context 'Key for the dairy is unlocked' do
-		it 'unlocked' do
+		it 'unlocked dairy' do
 			secret = Security.new
 			expect(secret.unlocked).to eq false
 		end
@@ -18,7 +18,7 @@ end
 # THE METHOD CLASS
 describe Diary do
 	context 'Calling method while is block' do
-		it 'error' do
+		it 'Rainsing Error while is block' do
 			error = Diary.new
 			#Open {} i
 			expect{error.add_entry error.get_entries}.to raise_error('Method block')
@@ -26,7 +26,7 @@ describe Diary do
 	end
 
 	context 'Writing into the diary' do
-		it 'Writing..' do
+		it 'Writing into the diary' do
 			write = Diary.new
 			write.unlocked
 			expect(write.add_entry('Page 1')).to eq('Page 1')
